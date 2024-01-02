@@ -407,10 +407,11 @@ html {
 	font-size: 1.5rem;
 	font-family:'Poppins';
 	color: white;
-    margin-right: 10%;
+        margin-right: 10%;
 	background-color: transparent;
 	border: 1px solid white;
 	border-radius: 5px;
+	width: 70%;
 }
 
 
