@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Akshar:wght@300&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+    <div class="left-side">
+        <div class="first_wrapper">
+            <div class="logo">
+                <img src="Images/Homepage/Logo.svg" alt="Logo">
+                <p>FORMED BY <br> RYAN BARRETO </p>
+            </div>
+            <div class="car_name">
+                <p> 2023 <br> <span> OUTLANDER </span> </p> 
+            </div>
+            <div class="brand">
+                <p> MITSUBISHI </p>
+            </div>
+            <div class="content">
+                <p> The Mitsubishi Outlander: a versatile car
+                    that has advanced technology, spacious
+                    comfort, and dynamic performance for
+                    best driving experience.</p>
+            </div>
+        </div>
+        <div class="second_wrapper" id = "section1">
+            <div class="read_more">
+                <a href="#">READ MORE <span>&gt;</span></a>
+            </div>
+            <div class="featured_car">
+                <img src="Images/Homepage/featured_car.svg">
+            </div>
+            <div class="color_des">
+                <p> PURE BROWN METALLIC </p>
+            </div>
+            <div class="pallette">
+                <img src="Images/Homepage/color_pallette.svg">
+            </div>
+            <div class="button_buy">
+                <button class="buy_button"> BUY NOW</button>
+                <button class="know_more_button"> KNOW MORE</button>
+            </div>
+            <div class="reminder">
+                <p>Prices and colors may vary by model. </p>
+            </div>
+        </div>
+        <div class="third_wrapper">
+            <div class="exclusive_video">
+            </div>
+            <div class="exclusive_news" id = "section2">
+                <img src="Images/Homepage/play_button.svg" >
+                <a href="#">VIEW EXCLUSIVE NEWS </a>
+            </div>
+        </div>
+    </div>
+
+			<div class="right-side">
+				<div class="navigation">
+					<nav>
+						<ul class='nav-bar'>
+						<input type='checkbox' id='check' />
+							<span class="menu">
+								<li><a href="">Home</a></li>
+								<li><a href="products.html">Products</a></li>
+								<li><a href="">Promos</a></li>
+								<li><a href="">News and Reviews</a></li>
+								<li><a href="">Contact Us</a></li>
+								<label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+							</span>
+					<label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+						</ul>
+					</nav>
+				<div class = "search_bar">
+                <div class="search-container">
+                    <input type="text" class="search-bar" placeholder="  Find Key Words"  onkeyup="searchSection(event)">
+					<div class="search_suggestions">
+					<p id="suggestions-list"></p>
+					</div>
+				</div>
+                </div>
+				</div>
+
+            <div class="title" id = "section3">
+                <p> Mitsubishi </p>
+            </div>
+
+            <div class="title_text">
+                <p> Welcome to the Mitsubishi Manila where innovation meets excellence - Explore our <br>
+					lineup and drive home with excellent style, performance and dependability now!</p>
+            </div>
+
+            <div class="button">
+                <button class="my-button">Get Started Now ></button>
+            </div>
+
+            <div class="descript">
+                <div class="left_descript">
+                    <p> OUTLANDER <br>
+                    <span> 2023 </span> </p>
+                </div>
+                <div class="right_descript">
+                    <p> New Featured <br>
+                    <span> Crossover Car</span> </p>
+                    <div class="bullet_container">
+                        <ul class="custom-list">
+                            <li>Emergency Lane Assist</li>
+                            <li>Lane Departure Warning</li>
+                            <li>Traffic Sign Recognition</li>
+                            <li>Driver Attention Alert</li>
+                            <li>Hill Start Assist</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="featured" id = "section4">
+                <div class="car1">
+                    <div class="limited1">
+                        <img src="Images/Homepage/car1.svg">
+                        <p>01 <span> LIMITED </span> </p>
+                    </div>
+                    <div class="buy1">
+                        <p> Now Starting At <p>
+                    </div>
+                    <div class="price1">
+                        <p> Php 1,068,000</p>
+                    </div>
+                    <div class="button1">
+                        <a href="#">Know More</a>
+                    </div>
+                </div>
+
+                <div class="car2">
+                    <div class="limited2">
+                        <img src="Images/Homepage/car2.svg">
+                        <p>02 <span> FOR SALE </span> </p>
+                    </div>
+                    <div class="buy1">
+                        <p> Now Starting At <p>
+                    </div>
+                    <div class="price1">
+                        <p> Php 711,000 </p>
+                    </div>
+                    <div class="button1">
+                        <a href="#">Know More</a>
+                    </div>
+                </div>
+
+                <div class="car3">
+                    <img src="Images/Homepage/car3.svg">
+                    <div class="limited3">
+                        <p>03 <span> NEW MODEL </span> </p>
+                        <img src="Images/Homepage/line.svg">
+                    </div>
+                    <div class="buy2">
+                        <p> Now Starting At <p>
+                    </div>
+                    <div class="price2">
+                        <p> Php 1,200,000 </p>
+                    </div>
+                </div>
+
+                <div class="car4">
+                    <div class="limited4">
+                        <img src="Images/Homepage/car4.svg">
+                        <p>01 <span> LIMITED </span> </p>
+                    </div>
+                    <div class="buy1">
+                        <p> Now Starting At <p>
+                    </div>
+                    <div class="price1">
+                        <p> Php 1,328,000 </p>
+                    </div>
+                    <div class="button1">
+                        <a href="#">Know More</a>
+                    </div>
+                </div>
+
+                <div class="option">
+                    <div class="more">
+                        <p> <a href="your_link_here"> DISCOVER <br> MORE MITSUBISHI</a></span> </p>
+                    </div>
+                    <div class="financing">
+                        <img src="Images/Homepage/wallet_icon.png">
+                        <a href="#">FINANCING OPTION > </a>
+                    </div>
+                </div>
+            </div>
+
+
+		</div>
+		</div> 
+		<div class = "footer" id = "section5"> 
+			<div class="footer_logo">
+			<a href="https://www.instagram.com/your_instagram_username">
+				<img src="Images/Homepage/ig_icon.svg" alt="Instagram">
+			</a>
+			<a href="https://twitter.com/your_twitter_username">
+				<img src="Images/Homepage/twitter_icon.svg" alt="Twitter">
+			</a>
+			<a href="https://www.facebook.com/your_facebook_page">
+				<img src="Images/Homepage/fb_icon.svg" alt="Facebook">
+			</a>
+		</div>
+			
+			<div class = "visit">
+				<p>Visit us at Mitsubishi | Otis Paco, Manila </p>
+			</div>
+			
+			<div class = "contact">
+				<p>Contact Support : +91 9876 5231 </p>
+			</div>
+		</div>
+
+<script src="JS-Script/Homepage/js-script.js"> </script>
+
+</body>
+</html>

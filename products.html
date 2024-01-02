@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="styles-2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Niramit:wght@600&family=Open+Sans:wght@700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha384-GLhlTQ8iKu1rHN9QeFvY+GKGjLJzGLb5L/6ZNQhV+9GNEeA1aZ5Fg5EAgbFTEdC" crossorigin="anonymous">
+</head>
+<body>
+<div class="navigation">
+    <div class="left-nav">
+        <nav>
+            <ul class='nav-bar'>
+                <input type='checkbox' id='check' />
+                <span class="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="">Products</a></li>
+                    <li><a href="">Promos</a></li>
+                    <li><a href="">News and Reviews</a></li>
+                    <li><a href="">Contact Us</a></li>
+                    <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+                </span>
+                <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="right-nav">
+		<p> MITSUBISHI </p>
+        <div class="logo-img">
+            <img src="Images/Products/logo.svg">
+        </div>
+        <img class="search-logo" src="Images/Products/search-logo.svg" onclick="toggleSearchBar()">
+        <div class="search_bar" id="searchBarContainer" style="display: none;">
+            <div class="search-container">
+                <input type="text" class="search-bar" id="searchBar" placeholder="Find Key Words" onkeyup="searchSection(event)" onblur="hideSearchBar()" onkeydown="handleSearch(event)">
+                <div class="search_suggestions">
+                    <p id="suggestions-list"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class = "body">
+ 
+<div class = "top-option" id = "top-option"> 
+<div class="left-option">
+
+<div class="option-box" id="testDriveBox">
+  <p>Test Drive <br><span>Placerat</span></p>
+  <img class="dropdown-icon" src="Images/Products/drop-down.svg">
+  <div class="dropdown-content">
+    <p data-option="Option 1">Option 1</p>
+    <p data-option="Option 2">Option 2</p>
+    <p data-option="Option 3">Option 3</p>
+  </div>
+</div>
+
+<div class="option-box" id="vehicleTypeBox">
+  <p>Vehicle Type <br><span>Placerat</span></p>
+  <img class="dropdown-icon" src="Images/Products/drop-down.svg">
+  <div class="dropdown-content">
+    <p data-option="Option A">Option A</p>
+    <p data-option="Option B">Option B</p>
+    <p data-option="Option C">Option C</p>
+  </div>
+</div>
+
+<div class="option-box" id="locationBox">
+  <p>Location <br><span>Placerat</span></p>
+  <img class="dropdown-icon" src="Images/Products/drop-down.svg">
+  <div class="dropdown-content">
+    <p data-option="Option A">Option A</p>
+    <p data-option="Option B">Option B</p>
+    <p data-option="Option C">Option C</p>
+  </div>
+</div>
+
+<div class="option-box" id="dateBox">
+  <p>Date Now<br><span class="dynamic-paragraph" id="dynamicParagraph"></span></p>
+  <img src="Images/Products/calendar.svg">
+</div>
+</div>
+<div class="right-option">
+  <a href="javascript:void(0);" onclick="generateEmailLink()" class="call-button">
+    <img src="Images/Products/mail-now.svg" alt="Mail Now">
+    <p>MAIL NOW!</p>
+  </a>
+</div>
+</div>
+
+<div class = "body-option">
+
+<button class = "openButton" onclick="showDiv()" id = "showDiv"><img src = "Images/Products/extend.svg"> </button>
+<button class = "closeButton"onclick="hideDiv()" id = "hideDiv"><img src = "Images/Products/close.svg"></button>
+
+
+<div class="accordion" id="id-accordion">
+    <div class="accordion-item">
+        <div class="accordion-item" >
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                <img src="Images/Products/option1.svg"> <p> Car Type <p> <div class="icon-logo"><i class="fas fa-plus icon"></i></div></div>
+                <div class="accordion-content">
+                    <h1> Car Type Available:</h1>
+                    <div class="checkbox-list">
+                        <label><input type="checkbox" class="toggleCheckbox" data-target="mirage"> Mirage<span> 5 </span></label> <br>
+                        <label><input type="checkbox" class="toggleCheckbox" data-target="xpander"> Xpander<span> 4 </span></label> <br>
+                        <label><input type="checkbox" class="toggleCheckbox" data-target="outlander"> Outlander<span> 1 </span></label><br>
+                        <label><input type="checkbox" class="toggleCheckbox" data-target="l300"> L300<span>1 </span></label><br>
+                        <label><input type="checkbox" class="toggleCheckbox" data-target="montero"> Montero<span> 3 </span></label><br>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <img src="Images/Products/option2.svg"> <p> Car Model <p> <div class="icon-logo"><i class="fas fa-plus icon"></i></div></div>
+                    <div class="accordion-content">
+                        <h1> Car Model Available: </h1>
+                        <ol id="mirage" class="hiddenText">
+                            <span>Mirage </span> <br>
+                            <li>Mirage GLX 1.2G MT</li>
+                            <li>Mirage GLX 1.2G CVT</li>
+                            <li>Mirage G4 GLX 1.2 MT</li>
+                            <li>Mirage G4 GLX 1.2G CVT</li>
+                            <li>Mirage G4 GLS 1.2G CVT</li>
+                        </ol>
+
+                        <ol id="xpander" class="hiddenText"> <span>Xpander </span> <br>
+                            <li>Xpander GLX 1.5G 2WD MT</li>
+                            <li>Xpander GLX 1.5G 2WD AT</li>
+                            <li>Xpander GLS 1.5G 2WD AT</li>
+                            <li>Xpander Cross 1.5G 2WD AT</li>
+                        </ol>
+
+                        <ol id="outlander" class="hiddenText"> <span>Outlander </span> <br>
+                            <li>Mirage GLX 1.2G MT</li>
+                        </ol>
+
+                        <ol id="l300" class="hiddenText"> <span>L300 </span><br>
+                            <li>L300 C/C 2.2D MT w/FB DUAL AC</li>
+                        </ol>
+
+                        <ol id="montero" class="hiddenText"> <span>Montero</span> <br>
+                            <li>Montero Sport GLX 2.4D 2WD AT</li>
+                            <li>Montero Sport GLS 2.4D 2WD AT</li>
+                            <li>Montero Sport GLS 2.4D 2WD MT</li>
+                        </ol>
+                    </div>
+                </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <img src="Images/Products/option3.svg"> <p> Disclaimer <p> <div class="icon-logo"><i class="fas fa-plus icon"></i></div></div>
+                    <div class="accordion-content">
+                        <p class="notice"> Notice for website users: </p>
+                        <p class="notice-content">Please be advised that due to <b>privacy concerns</b>, <b>certain car listings may not be displayed on this website.</b> For a complete view of our available inventory,
+                            we encourage you to visit us at <b>Mitsubishi Paco Manila. </b>
+                            <br> <br>I will be happy to assist you with any inquiries. The absence of specific listings
+                            online is a precautionary measure to prioritize customer privacy.
+                            Thank you for your understanding.<b> For further assistance, contact us or visit our showroom. </b> </p>
+                    </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <img src="Images/Products/option4.svg"> <p> Safety Rating  <p> <div class="icon-logo"><i class="fas fa-plus icon"></i></div></div>
+                    <div class="accordion-content">
+                        <p class="safety-title">How to read and understand the safety ratings</p>
+                        <div class="safety-steps">
+                            <img src="Images/Products/step1.svg"> <p> Scan for distinct logos, icons or images that represent particular safety features. </p>
+                        </div>
+                        <div class="safety-steps">
+                            <img src="Images/Products/step2.svg"> <p> Each logo might symbolize a specific technology, such as automatic emergency braking, lane-keeping assistance, or advanced airbag systems. </p>
+                        </div>
+                        <div class="safety-steps">
+                            <img src="Images/Products/step3.svg"> <p> Pay attention to accompanying text or tooltips that explain the meaning of each logo.</p>
+                        </div>
+                        <div class="safety-logo-container">
+                            <img src="Images/Products/safety-logo1.svg">
+                            <img src="Images/Products/safety-logo2.svg">
+                            <img src="Images/Products/safety-logo3.svg">
+                            <img src="Images/Products/safety-logo4.svg">
+                        </div>
+                    </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <img src="Images/Products/option5.svg"> <p> Financing <p><div class="icon-logo"><i class="fas fa-plus icon"></i></div></div>
+                    <div class="accordion-content">
+                        <a href="#" class="my-button">Know Requirements > </a>
+                        <h1> Accredited Bank Cards: </h1>
+                        <div class="checkbox-list">
+                            <label><input type="checkbox" class="toggleCheckbox" data-target="major-banks"> Major Universal Banks<span> 3 </span></label> <br>
+                            <label><input type="checkbox" class="toggleCheckbox" data-target="international-banks"> International Banks<span> 1 </span></label> <br>
+                            <label><input type="checkbox" class="toggleCheckbox" data-target="local-banks"> Local Universal Banks<span> 1 </span></label><br>
+                            <label><input type="checkbox" class="toggleCheckbox" data-target="regional-banks"> Regional/Thrift Banks<span>1 </span></label>
+                        </div>
+
+                        <div class="card-images">
+                            <img id="major-banks" class="hiddenText" src="Images/Products/major-banks.svg">
+                            <img id="international-banks" class="hiddenText" src="Images/Products/international-banks.svg">
+                            <img id="local-banks" class="hiddenText" src="Images/Products/local-banks.svg">
+                            <img id="regional-banks" class="hiddenText" src="Images/Products/regional-banks.svg">
+
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+        <div class="privacy-condition">
+            <p> Total No. Of Cars: &nbsp; &nbsp; <span> 9 Cars </span> </p>
+            <a href="#" class="privacy-button"> PRIVACY CONDITION </a>
+			<a href="#" class="privacy-button-img"> <img src = "Images/Products/privacy.svg"> </a>
+            <a href="#" class="proceed-button"> > </a>
+        </div>
+    </div>
+
+<div class="products" id="products">
+    <div class="products-title">
+        <div class="title-left">
+            <img src="Images/Products/popular-logo.svg">
+            <p> Popular Cars </p>
+        </div>
+        <div class="title-right">
+            <a href="#" class="see-all-list" onclick="openPopup('List 1')"> See All List > </a>
+        </div>
+    </div>
+
+    <div class="promo-cars">
+        <div class="item" id="xpander-cross">
+            <div class="top-container">
+                <div class="logotext"><img src="Images/Products/car-logo.svg">
+                    <div class="title-car">
+                        <h1>Xpander <br><span>Cross </span></h1>
+                    </div>
+                    <div class="price"> <p> ₱1,328,000</p> </div>
+                </div>
+                <div class="car-image1"> <img src="Images/Products/car-popular1.svg"> </div>
+            </div>
+            <div class="inquire">
+                <img src="Images/Products/ryan.svg">
+                <div class="rating">
+                    <p> Car's Total Rating </p>
+                    <img src="Images/Products/5star-rate.svg">
+                </div>
+                <div class="inquire-now1">
+                    <a href="#"> Inquire Now > </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="item" id="outlander-phev">
+            <div class="top-container">
+                <div class="logotext"><img src="Images/Products/car-logo.svg">
+                    <div class="title-car">
+                        <h1>Outlander <br><span>PHEV </span></h1>
+                    </div>
+                    <div class="price"> <p> ₱2,998,000</p> </div>
+                </div>
+                <div class="car-image2"> <img src="Images/Products/car-popular2.svg"> </div>
+            </div>
+            <div class="inquire">
+                <img src="Images/Products/ryan.svg">
+                <div class="rating">
+                    <p> Car's Total Rating </p>
+                    <img src="Images/Products/4.5star-rate.svg">
+                </div>
+                <div class="inquire-now2">
+                    <a href="#"> Inquire Now > </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="item" id="outlander-petrol">
+            <div class="top-container">
+                <div class="logotext"><img src="Images/Products/car-logo.svg">
+                    <div class="title-car">
+                        <h1>Outlander <br><span>Petrol </span></h1>
+                    </div>
+                    <div class="price"> <p> ₱1,835,000</p> </div>
+                </div>
+                <div class="car-image3"> <img src="Images/Products/car-popular3.svg"> </div>
+            </div>
+            <div class="inquire">
+                <img src="Images/Products/ryan.svg">
+                <div class="rating">
+                    <p> Car's Total Rating </p>
+                    <img src="Images/Products/star-rate.svg">
+                </div>
+                <div class="inquire-now3">
+                    <a href="#"> Inquire Now > </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="all-cars-title">
+    <div class="title-left">
+        <img src="Images/Products/all-cars-logo.svg">
+        <p> All cars </p>
+    </div>
+    <div class="title-right">
+        <a href="#" class="see-all-list" onclick="openPopup('List 2')"> See Other List > </a>
+    </div>
+</div>
+
+<div class="product-cars" id="productContainer">
+
+  <div class="product-card" id="l300">
+    <div class="image">
+      <img src="Images/Products/l300-car.svg">
+    </div>
+
+    <div class="card-title">
+      <div class="card-top-title">
+        <div class="card-left-title">
+          <p>L300<br><span>Cab & Chassis</span></p>
+        </div>
+        <a href="#">
+          <button class="safety-rating-button">Safety Ratings ></button>
+        </a>
+      </div>
+
+      <div class="card-features">
+        <div class="card-top-features">
+          <div class="left-icon">
+            <img src="Images/Products/speed-icon.svg">
+            <p>6-Speed</p>
+          </div>
+          <div class="right-icon">
+            <img src="Images/Products/gas-icon.svg">
+            <p>2.4L Diesel</p>
+          </div>
+        </div>
+        <div class="card-bottom-features">
+          <img src="Images/Products/engine-icon.svg">
+          <p>D4 MIVEC I/C T/C High Power</p>
+        </div>
+      </div>
+
+      <div class="price-section">
+        <div class="product-price">
+          <p>Php 1,016,900<br><span>srp price</span></p>
+        </div>
+
+        <div class="buy-button">
+          <a href="#" style="text-decoration: none;">
+            <button class="more-details-button">
+              <img src="Images/Products/wallet-icon.svg" alt="Wallet Icon">
+              More Details
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-card" id="xpander">
+    <div class="image">
+      <img src="Images/Products/xpander-car.svg">
+    </div>
+
+    <div class="card-title">
+      <div class="card-top-title">
+        <div class="card-left-title">
+          <p>Xpander<br><span>GLX M/T</span></p>
+        </div>
+        <a href="#">
+          <button class="safety-rating-button">Safety Ratings ></button>
+        </a>
+      </div>
+
+      <div class="card-features">
+        <div class="card-top-features">
+          <div class="left-icon">
+            <img src="Images/Products/speed-icon.svg">
+            <p>In-line4</p>
+          </div>
+          <div class="right-icon">
+            <img src="Images/Products/gas-icon.svg">
+            <p>1.5 Unleaded</p>
+          </div>
+        </div>
+        <div class="card-bottom-features">
+          <img src="Images/Products/engine-icon.svg">
+          <p>DOHC 16-VALVE with MIVEC</p>
+        </div>
+      </div>
+
+      <div class="price-section">
+        <div class="product-price">
+          <p>Php 1,068,000<br><span>srp price</span></p>
+        </div>
+
+        <div class="buy-button">
+          <a href="#" style="text-decoration: none;">
+            <button class="more-details-button">
+              <img src="Images/Products/wallet-icon.svg" alt="Wallet Icon">
+              More Details
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-card" id="strada">
+    <div class="image">
+      <img src="Images/Products/strada-car.svg">
+    </div>
+
+    <div class="card-title">
+      <div class="card-top-title">
+        <div class="card-left-title">
+          <p>Strada<br><span>Athlete 4WD AT</span></p>
+        </div>
+        <a href="#">
+          <button class="safety-rating-button">Safety Ratings ></button>
+        </a>
+      </div>
+
+      <div class="card-features">
+        <div class="card-top-features">
+          <div class="left-icon">
+            <img src="Images/Products/speed-icon.svg">
+            <p>6-Speed</p>
+          </div>
+          <div class="right-icon">
+            <img src="Images/Products/gas-icon.svg">
+            <p>2.4L Diesel</p>
+          </div>
+        </div>
+        <div class="card-bottom-features">
+          <img src="Images/Products/engine-icon.svg">
+          <p>MIVEC I/C T/C High Power</p>
+        </div>
+      </div>
+
+      <div class="price-section">
+        <div class="product-price">
+          <p>Php 1,827,000<br><span>srp price</span></p>
+        </div>
+
+        <div class="buy-button">
+          <a href="#" style="text-decoration: none;">
+            <button class="more-details-button">
+              <img src="Images/Products/wallet-icon.svg" alt="Wallet Icon">
+              More Details
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-card" id="montero-sport">
+    <div class="image">
+      <img src="Images/Products/montero-sport-car.svg">
+    </div>
+
+    <div class="card-title">
+      <div class="card-top-title">
+        <div class="card-left-title">
+          <p>Montero Sport<br><span>4WD AT</span></p>
+        </div>
+        <a href="#">
+          <button class="safety-rating-button">Safety Ratings ></button>
+        </a>
+      </div>
+
+      <div class="card-features">
+        <div class="card-top-features">
+          <div class="left-icon">
+            <img src="Images/Products/speed-icon.svg">
+            <p>8-Speed</p>
+          </div>
+          <div class="right-icon">
+            <img src="Images/Products/gas-icon.svg">
+            <p>2.4L Diesel</p>
+          </div>
+        </div>
+        <div class="card-bottom-features">
+          <img src="Images/Products/engine-icon.svg">
+          <p>D4 MIVEEC I/C T/C High Power</p>
+        </div>
+      </div>
+
+      <div class="price-section">
+        <div class="product-price">
+          <p>Php 2,370,000<br><span>srp price</span></p>
+        </div>
+
+        <div class="buy-button">
+          <a href="#" style="text-decoration: none;">
+            <button class="more-details-button">
+              <img src="Images/Products/wallet-icon.svg" alt="Wallet Icon">
+              More Details
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-card" id="mirage-g4">
+    <div class="image">
+      <img src="Images/Products/mirage-g4-car.svg">
+    </div>
+
+    <div class="card-title">
+      <div class="card-top-title">
+        <div class="card-left-title">
+          <p>Mirage G4<br><span>GLS 1.2CVT</span></p>
+        </div>
+        <a href="#">
+          <button class="safety-rating-button">Safety Ratings ></button>
+        </a>
+      </div>
+
+      <div class="card-features">
+        <div class="card-top-features">
+          <div class="left-icon">
+            <img src="Images/Products/speed-icon.svg">
+            <p>In-line 3</p>
+          </div>
+          <div class="right-icon">
+            <img src="Images/Products/gas-icon.svg">
+            <p>1.2L Gasoline</p>
+          </div>
+        </div>
+        <div class="card-bottom-features">
+          <img src="Images/Products/engine-icon.svg">
+          <p>1.2L 3-cylinder DOHC MIVEC</p>
+        </div>
+      </div>
+
+      <div class="price-section">
+        <div class="product-price">
+          <p>Php 899,000<br><span>srp price</span></p>
+        </div>
+
+        <div class="buy-button">
+          <a href="#" style="text-decoration: none;">
+            <button class="more-details-button">
+              <img src="Images/Products/wallet-icon.svg" alt="Wallet Icon">
+              More Details
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-card" id="mirage">
+    <div class="image">
+      <img src="Images/Products/mirage-car.svg">
+    </div>
+
+    <div class="card-title">
+      <div class="card-top-title">
+        <div class="card-left-title">
+          <p>Mirage<br><span>GLX 1.2G CVT</span></p>
+        </div>
+        <a href="#">
+          <button class="safety-rating-button">Safety Ratings ></button>
+        </a>
+      </div>
+
+      <div class="card-features">
+        <div class="card-top-features">
+          <div class="left-icon">
+            <img src="Images/Products/speed-icon.svg">
+            <p>In-line 3</p>
+          </div>
+          <div class="right-icon">
+            <img src="Images/Products/gas-icon.svg">
+            <p>1.2L Gasoline</p>
+          </div>
+        </div>
+        <div class="card-bottom-features">
+          <img src="Images/Products/engine-icon.svg">
+          <p>DOHC MIVEEC ECI-Multi</p>
+        </div>
+      </div>
+
+      <div class="price-section">
+        <div class="product-price">
+          <p>Php 772,000<br><span>srp price</span></p>
+        </div>
+
+        <div class="buy-button">
+          <a href="#" style="text-decoration: none;">
+            <button class="more-details-button">
+              <img src="Images/Products/wallet-icon.svg" alt="Wallet Icon">
+              More Details
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+</div>
+</div>
+</div>
+
+
+<div class="footer">
+  <div class="section">
+    <div class="section1">
+      <img class="footer-logo" src="Images/Products/logo-footer.svg">
+      <p>DRIVE YOUR AMBITION</p>
+      <br>
+      <hr>
+      <div class="social-links">
+        <img src="Images/Products/ig-logo.svg">
+        <img src="Images/Products/twitter-logo.svg">
+        <img src="Images/Products/fb-logo.svg">
+        <img src="Images/Products/google-logo.svg">
+      </div>
+    </div>
+
+    <div class="section2">
+      <div class="quick-li">
+        <p class="footer-title">Quick Links</p>
+        <hr class="red-line">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="news_reviews.html">News & Reviews</a></li>
+          <li><a href="product.html">Product</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="promos.html">Promos</a></li>
+        </ul>
+      </div>
+
+      <div class="contact-info">
+        <p class="footer-title">Contact</p>
+        <hr class="red-line">
+        <div class="infos">
+          <img src="Images/Products/loc-logo.svg">
+          <p class="location-details">Mitsubishi Paco Manila</p>
+        </div>
+        <div class="infos">
+          <img src="Images/Products/email-logo.svg">
+          <p class="info-p">ryan.mitsubishi@gmail.com</p>
+        </div>
+        <div class="infos">
+          <img src="Images/Products/call-logo.svg">
+          <p class="info-p">Lorem Ipsum Dolor Sit Amet</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section3">
+      <p>Contact us by:</p>
+      <img class="call-box" src="Images/Products/contact-no.svg">
+      <div class="credit-cards">
+        <img src="Images/Products/card1.svg">
+        <img src="Images/Products/card2.svg">
+        <img src="Images/Products/card3.svg">
+        <img src="Images/Products/card4.svg">
+        <img src="Images/Products/card5.svg">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="overlay" id="overlay">
+  <div class="popup" id="popupList1">
+    <span class="close-btn" onclick="closePopup()">x</span>
+    <h2>Popular Cars</h2>
+    <table>
+      <tr>
+        <th>Car Model</th>
+        <th>Price</th>
+      </tr>
+      <tr>
+        <td>Xpander Cross</td>
+        <td>Php 1,328,000</td>
+      </tr>
+	  
+	   <tr>
+        <td>Outlander Phev</td>
+        <td>Php 2,998,000</td>
+      </tr>
+	  
+	   <tr>
+        <td>Outlander Petrol</td>
+        <td>Php 1,835,000</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="popup" id="popupList2">
+    <span class="close-btn" onclick="closePopup()">x</span>
+    <h2>All Cars</h2>
+    <table>
+      <tr>
+        <th>Car Model</th>
+        <th>Price</th>
+      </tr>
+      <tr>
+        <td>Mirage GLX 1.2G MT</td>
+        <td>Php711,000</td>
+      </tr>
+	  <tr>
+        <td>Mirage G4 GLX 1.2G MT</td>
+        <td>Php769,000</td>
+      </tr>
+	  <tr>
+        <td>Mirage G4 GLX 1.2G CVT</td>
+        <td>Php899,000</td>
+      </tr>
+	  <tr>
+        <td>Montero Sport GLX 2.4D 2WD MT</td>
+        <td>Php1,568,000</td>
+      </tr>
+	  <tr>
+        <td>Montero Sport GLS 2.4D 2WD AT</td>
+        <td>Php1,828,000</td>
+      </tr>
+	  <tr>
+        <td>Xpander GLX 1.5G 2WD AT</td>
+        <td>Php1,128,000</td>
+      </tr>
+	  <tr>
+        <td>Xpander Cross 1.5G 2WD AT (Monotone)</td>
+        <td>Php1,328,000</td>
+      </tr>
+	  <tr>
+        <td>Xpander Cross 1.5G 2WD AT (Twotone)</td>
+        <td>Php1,338,000</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="JS-Script/Products/js-script.js"> </script>
+
+
+
+
+</body>
+</html>
