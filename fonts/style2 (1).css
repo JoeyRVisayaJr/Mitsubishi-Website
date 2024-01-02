@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Craft Gothic';
+    src: local('Craft Gothic Regular'), local('Craft-Gothic-Regular'),
+        url('CraftGothic-Regular.woff2') format('woff2'),
+        url('CraftGothic-Regular.woff') format('woff'),
+        url('CraftGothic-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }

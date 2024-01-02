@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Craft Gothic';
+    src: local('Craft Gothic Light Condensed'), local('Craft-Gothic-Light-Condensed'),
+        url('CraftGothic-LightCondensed.woff2') format('woff2'),
+        url('CraftGothic-LightCondensed.woff') format('woff'),
+        url('CraftGothic-LightCondensed.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+  }
