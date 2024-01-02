@@ -1110,7 +1110,7 @@ html {
 
 
 }
-@media only screen and (min-width: 480px) and (max-width: 768px){
+@media only screen and (max-width: 768px){
 html {
 	font-size: 43%;
 }
@@ -1122,6 +1122,18 @@ html {
 .search-bar {
 	padding: 6px;
 }
+
+.suggestion-item {
+	width: 70%;
+    margin-right: 2%;
+	background-color: #377084;
+	color: white;
+}
+
+.suggestion-item:hover {
+    background-color: grey;
+}
+
 .left-side {
 	padding: 3rem 6rem 6rem 6rem;
 	width: 100%;
